@@ -1,17 +1,17 @@
 import { useState } from "react";
 import RouterLink from "next/link";
 import { useTheme } from "@mui/material/styles";
+import { useOffSetTop, useResponsive } from "@/hooks";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@/components/mui/container";
+import IconButton from "@mui/material/IconButton";
+import Icon from "@/components/icon";
 import Logo from "@/components/logo";
-import { useOffSetTop, useResponsive } from "@/hooks";
 import DesktopNavigation from "./components/desktop";
 import MobileNavigation from "./components/mobile";
-import { IconButton } from "@mui/material";
-import Icon from "@/components/icon";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -19,25 +19,21 @@ const Header = () => {
   const theme = useTheme();
   const lgBelow = useResponsive("down", "md");
   const isOffSet = useOffSetTop(90);
+
   const handleToggleMobileNav = () => setNavOpen((prev) => !prev);
 
   return (
-    <AppBar
-      color="default"
-      position="fixed"
-      sx={{
-        backgroundColor: isOffSet ? "background.paper" : "transparent",
-        py: 2,
-        boxShadow: "none",
-        borderBottom: `1px solid ${theme.palette.divider}`
-      }}
-    >
+    <AppBar sx={{ boxShadow: 0, bgcolor: "transparent" }}>
       <Toolbar
         sx={{
           p: `0 !important`,
           minHeight: `${
             (theme.mixins.toolbar.minHeight as number) - 1
-          }px !important`
+          }px !important`,
+          ...(isOffSet && {
+            bgcolor: "common.white",
+            transition: "opacity 0.5s ease"
+          })
         }}
       >
         <Container
@@ -47,7 +43,7 @@ const Header = () => {
             justifyContent: "space-between"
           }}
         >
-          <Logo />
+          <Logo isLogoWhite={!isOffSet} />
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             {lgBelow ? (
@@ -56,7 +52,7 @@ const Header = () => {
                 handleToggleMobileNav={handleToggleMobileNav}
               />
             ) : (
-              <DesktopNavigation />
+              <DesktopNavigation isOffSet={isOffSet} />
             )}
             <Box sx={{ display: "flex", alignItems: "center", gap: 4, ml: 4 }}>
               {lgBelow ? (

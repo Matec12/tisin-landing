@@ -1,5 +1,5 @@
 const typography = {
-  fontFamily: "Poppins, sans-serif",
+  fontFamily: "Lato, sans-serif",
   fontSize: 13.125,
 
   display2xl: {

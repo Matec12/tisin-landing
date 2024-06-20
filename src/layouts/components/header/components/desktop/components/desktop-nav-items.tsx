@@ -6,8 +6,8 @@ import {
 import DesktopNavLink from "./desktop-nav-link";
 
 interface Props {
-  hasParent?: boolean;
-  navItems?: NavItemsType;
+  isOffSet: boolean;
+  navItems: NavItemsType;
 }
 const resolveComponent = () => {
   return DesktopNavLink;

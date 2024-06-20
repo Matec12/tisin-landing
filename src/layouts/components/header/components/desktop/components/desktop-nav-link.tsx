@@ -33,11 +33,12 @@ const ListItem = styled(MuiListItem)<
 }));
 
 interface DesktopNavLinkProps {
+  isOffSet: boolean;
   item: NavLinkType;
 }
 
 const DesktopNavLink = (props: DesktopNavLinkProps) => {
-  const { item } = props;
+  const { isOffSet, item } = props;
 
   const { menuTextTruncate } = themeConfig;
 
@@ -112,9 +113,13 @@ const DesktopNavLink = (props: DesktopNavLinkProps) => {
             <Typography
               {...(menuTextTruncate && { noWrap: true })}
               variant="textSm"
-              fontWeight={500}
               sx={{
-                color: isNavLinkActive() ? "primary.main" : "grey.600"
+                color: isNavLinkActive()
+                  ? "primary.main"
+                  : isOffSet
+                    ? "grey.600"
+                    : "common.white",
+                fontWeight: isNavLinkActive() ? 600 : 500
               }}
             >
               {item.title}

@@ -1,10 +1,11 @@
+import { HomeHero } from "@/views/home";
 
- const Home=()=> {
+const Home = () => {
   return (
-    <main className=''>
-     home
-    </main>
+    <>
+      <HomeHero />
+    </>
   );
-}
+};
 
-export default Home
+export default Home;
