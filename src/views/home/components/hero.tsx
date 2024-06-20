@@ -22,7 +22,7 @@ const HeroOverlay = styled(Box)(({ theme }) => ({
   left: 0,
   width: "100%",
   height: "100%",
-  opacity: 0.4,
+  opacity: 0.6,
   zIndex: 1,
   backgroundSize: "cover",
   backgroundColor: theme.palette.common.black,
@@ -79,8 +79,6 @@ const HomeHero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  console.log({ currentIndex });
-
   return (
     <HeroWrapper className="hero-carousel">
       <HeroOverlay />
@@ -92,20 +90,28 @@ const HomeHero = () => {
         />
       ))}
       <HeroContentWrapper>
-        <Typography variant="displayXl" color="common.white" fontWeight={600}>
+        <Typography variant="display2xl" color="common.white" fontWeight={700}>
           {siteConfig.tagLine}
         </Typography>
-        <Typography variant="textMd" color="common.white" fontWeight={500}>
+        <Typography
+          variant="textLg"
+          color="common.white"
+          fontWeight={500}
+          sx={{ maxWidth: 600 }}
+        >
           {siteConfig.description}
         </Typography>
         <Stack direction="row" justifyContent="center" gap={2.5} mt={6}>
           <Button
             component={Link}
             href="/contact"
-            variant="outlined"
+            variant="contained"
             size="large"
-            color="grey"
-            sx={{ backgroundColor: "common.white" }}
+            sx={{
+              backgroundColor: "common.white",
+              color: "primary.main",
+              "&:hover": { bgcolor: "primary.25" }
+            }}
           >
             Apply Here
           </Button>

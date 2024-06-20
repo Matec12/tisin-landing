@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import ThemeComponent from "@/theme/ThemeComponent";
 import Layout from "@/layouts";
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
   keywords: "Online, Therapy, Friend, Listen"
 };
 
-const lato = Lato({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
-  weight: ["100", "300", "400", "700", "900"]
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
 });
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -39,7 +39,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           rel="stylesheet"
         /> */}
       </head>
-      <body className={lato.className} suppressHydrationWarning={true}>
+      <body className={dmSans.className} suppressHydrationWarning={true}>
         <AppRouterCacheProvider>
           <ThemeComponent>
             <Layout>{children}</Layout>

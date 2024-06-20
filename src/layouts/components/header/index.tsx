@@ -58,7 +58,7 @@ const Header = () => {
               {lgBelow ? (
                 <IconButton
                   onClick={handleToggleMobileNav}
-                  sx={{ color: "grey.500" }}
+                  sx={{ color: isOffSet ? "grey.500" : "common.white" }}
                 >
                   <Icon icon="hugeicons:menu-02" rotate={90} />
                 </IconButton>
@@ -69,8 +69,13 @@ const Header = () => {
                     target="_blank"
                     rel="noopener"
                     href="https://app.tisin.com/login"
-                    variant="outlined"
+                    variant={isOffSet ? "outlined" : "text"}
                     color="grey"
+                    sx={{
+                      backgroundColor: "common.white",
+                      color: "primary.main",
+                      "&:hover": { bgcolor: "primary.15" }
+                    }}
                   >
                     Login
                   </Button>

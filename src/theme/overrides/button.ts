@@ -16,8 +16,8 @@ const buttonVariantColorState = (
       ...(variant === "outlined" &&
         (color === "grey"
           ? {
-              border: `1px solid ${theme.palette.grey[300]}`,
-              backgroundColor: theme.palette.common.white
+              border: `2px solid ${theme.palette.grey[300]}`,
+              backgroundColor: "transparent"
             }
           : {
               color: theme.palette[color][700],

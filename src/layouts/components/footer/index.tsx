@@ -7,13 +7,13 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: (theme) => theme.palette.primary[700],
+        backgroundColor: (theme) => theme.palette.primary[950],
         py: 6,
         boxShadow: "none"
       }}
     >
       <FooterTop />
-      <Divider sx={{ borderColor: "primary.50" }} />
+      <Divider sx={{ borderColor: "primary.100" }} />
       <FooterBottom />
     </Box>
   );
