@@ -1,7 +1,7 @@
 import {
   NavLink as NavLinkType,
   NavGroup as NavGroupType,
-  NavItemsType,
+  NavItemsType
 } from "@/layouts/types";
 import DesktopNavLink from "./desktop-nav-link";
 

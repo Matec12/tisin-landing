@@ -9,6 +9,8 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Icon from "@/components/icon";
+import SlideUp from "@/components/animation/slide-up";
+import GrowIn from "@/components/animation/grow-in";
 
 const HomeFAQsWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",
@@ -80,48 +82,53 @@ const HomeFAQs = () => {
   return (
     <HomeFAQsWrapper>
       <Container>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            mx: "auto",
-            textAlign: "center",
-            maxWidth: 600
-          }}
-        >
-          <Typography variant="displayXl" color="grey.900" fontWeight={600}>
-            Frequently <br /> Asked Questions
-          </Typography>
-        </Box>
+        <SlideUp>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              mx: "auto",
+              textAlign: "center",
+              maxWidth: 600
+            }}
+          >
+            <Typography variant="displayXl" color="grey.900" fontWeight={600}>
+              Frequently <br /> Asked Questions
+            </Typography>
+          </Box>
+        </SlideUp>
         <Box sx={{ mt: 12, maxWidth: 600, mx: "auto" }}>
           {FAQs.map((faq, index) => {
             const panelId = `panel${index + 1}`;
             const isExpanded = expanded === panelId;
 
             return (
-              <Accordion
-                key={index}
-                expanded={isExpanded}
-                onChange={handleChange(panelId)}
-              >
-                <AccordionSummary
-                  expandIcon={
-                    <Icon icon={isExpanded ? "tabler:minus" : "tabler:plus"} />
-                  }
-                  aria-controls={`${panelId}-content`}
-                  id={`${panelId}-header`}
+              <GrowIn key={index}>
+                <Accordion
+                  expanded={isExpanded}
+                  onChange={handleChange(panelId)}
                 >
-                  <Typography variant="textXl" color="grey.700">
-                    {faq.question}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography variant="textMd" color="grey.600">
-                    {faq.answer}
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+                  <AccordionSummary
+                    expandIcon={
+                      <Icon
+                        icon={isExpanded ? "tabler:minus" : "tabler:plus"}
+                      />
+                    }
+                    aria-controls={`${panelId}-content`}
+                    id={`${panelId}-header`}
+                  >
+                    <Typography variant="textXl" color="grey.700">
+                      {faq.question}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant="textMd" color="grey.600">
+                      {faq.answer}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </GrowIn>
             );
           })}
         </Box>

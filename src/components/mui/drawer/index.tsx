@@ -40,7 +40,7 @@ const CustomDrawer = (props: CustomDrawerProps) => {
         <Button
           size="small"
           variant="text"
-          color="grey"
+          color="gray"
           onClick={handleClose}
           startIcon={<Icon icon="tabler:x-close" />}
         >

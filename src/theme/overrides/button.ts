@@ -4,8 +4,7 @@ import { OwnerStateThemeType } from "./";
 
 const buttonVariantColorState = (
   variant: ButtonProps["variant"],
-  color: ThemeColor | "grey" | "tertiary",
-  shadowColor?: string
+  color: ThemeColor | "gray" | "tertiary"
 ) => {
   return {
     props: { variant, color },
@@ -14,9 +13,9 @@ const buttonVariantColorState = (
         boxShadow: `none`
       }),
       ...(variant === "outlined" &&
-        (color === "grey"
+        (color === "gray"
           ? {
-              border: `2px solid ${theme.palette.grey[300]}`,
+              border: `2px solid ${theme.palette.gray[300]}`,
               backgroundColor: "transparent"
             }
           : {
@@ -27,25 +26,25 @@ const buttonVariantColorState = (
             })),
       "&:hover": {
         backgroundColor:
-          color === "grey" || variant === "text"
+          color === "gray" || variant === "text"
             ? theme.palette[color][50]
             : variant === "outlined"
               ? theme.palette[color][100]
               : theme.palette[color][600],
         ...(variant === "outlined" &&
-          color === "grey" && {
-            border: `1px solid ${theme.palette.grey[300]}`
+          color === "gray" && {
+            border: `1px solid ${theme.palette.gray[300]}`
           })
       },
       "&:focus": {
         backgroundColor:
-          color === "grey" || variant === "text"
+          color === "gray" || variant === "text"
             ? theme.palette.common.white
             : variant === "outlined"
               ? theme.palette[color][50]
               : theme.palette[color][600],
         ...(variant !== "text" && {
-          boxShadow: `0px 0px 0px 4px ${shadowColor}, 0px 1px 2px 0px rgba(16, 24, 40, 0.05)`
+          boxShadow: `0px 0px 0px 4px ${color === "gray" ? "#F2F4F7" : color === "primary" ? theme.palette[color][15] : theme.palette[color][50]}, 0px 1px 2px 0px rgba(16, 24, 40, 0.05)`
         })
       }
     })
@@ -57,12 +56,12 @@ const Button = () => {
     MuiButton: {
       variants: [
         // contained
-        buttonVariantColorState("contained", "primary", "#C1CEC5"),
-        buttonVariantColorState("contained", "secondary", "#C5F0D2"),
-        buttonVariantColorState("contained", "tertiary", "#FEEBD1"),
-        buttonVariantColorState("contained", "success", "#DCFAE6"),
-        buttonVariantColorState("contained", "error", "#FEE4E2"),
-        buttonVariantColorState("contained", "warning", "#FEF0C7"),
+        buttonVariantColorState("contained", "primary"),
+        buttonVariantColorState("contained", "secondary"),
+        buttonVariantColorState("contained", "tertiary"),
+        buttonVariantColorState("contained", "success"),
+        buttonVariantColorState("contained", "error"),
+        buttonVariantColorState("contained", "warning"),
 
         // text
         buttonVariantColorState("text", "primary"),
@@ -71,16 +70,16 @@ const Button = () => {
         buttonVariantColorState("text", "success"),
         buttonVariantColorState("text", "error"),
         buttonVariantColorState("text", "warning"),
-        buttonVariantColorState("text", "grey"),
+        buttonVariantColorState("text", "gray"),
 
         // outlined
-        buttonVariantColorState("outlined", "primary", "#BBD6EF"),
-        buttonVariantColorState("outlined", "secondary", "#C5F0D2"),
-        buttonVariantColorState("outlined", "tertiary", "#FEEBD1"),
-        buttonVariantColorState("outlined", "success", "#DCFAE6"),
-        buttonVariantColorState("outlined", "error", "#FEE4E2"),
-        buttonVariantColorState("outlined", "warning", "#FEF0C7"),
-        buttonVariantColorState("outlined", "grey", "#F2F4F7")
+        buttonVariantColorState("outlined", "primary"),
+        buttonVariantColorState("outlined", "secondary"),
+        buttonVariantColorState("outlined", "tertiary"),
+        buttonVariantColorState("outlined", "success"),
+        buttonVariantColorState("outlined", "error"),
+        buttonVariantColorState("outlined", "warning"),
+        buttonVariantColorState("outlined", "gray")
       ],
       styleOverrides: {
         root: ({ theme }: OwnerStateThemeType) => ({

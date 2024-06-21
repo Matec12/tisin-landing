@@ -5,8 +5,8 @@ export const siteConfig = {
   description:
     "TISIN Therapy App is an innovative platform designed to bridge the gap between individuals seeking mental and emotional support and compassionate, trained, non-certified therapist stand-ins.",
   links: {
-    github: "",
-  },
+    github: ""
+  }
 };
 
 export type SiteConfig = typeof siteConfig;

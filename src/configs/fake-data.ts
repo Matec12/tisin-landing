@@ -10,7 +10,7 @@ export const TESTIMONIALS = [
     discountPrice: 200,
     discountPercentage: 10,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 60,
+    quantity: 60
   },
   {
     id: "6d7b18e965c1",
@@ -23,7 +23,7 @@ export const TESTIMONIALS = [
     discountPrice: 300,
     discountPercentage: 15,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 30,
+    quantity: 30
   },
   {
     id: "2e8b49f6a1d3",
@@ -36,7 +36,7 @@ export const TESTIMONIALS = [
     discountPrice: 350,
     discountPercentage: 5,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 75,
+    quantity: 75
   },
   {
     id: "f489c3b7a2e9",
@@ -49,7 +49,7 @@ export const TESTIMONIALS = [
     discountPrice: 600,
     discountPercentage: 20,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 90,
+    quantity: 90
   },
   {
     id: "b165972f48d6",
@@ -62,7 +62,7 @@ export const TESTIMONIALS = [
     discountPrice: 200,
     discountPercentage: 8,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 20,
+    quantity: 20
   },
   {
     id: "b185972f48d6",
@@ -75,7 +75,7 @@ export const TESTIMONIALS = [
     discountPrice: 200,
     discountPercentage: 8,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 20,
+    quantity: 20
   },
   {
     id: "a94f2b7c3e86",
@@ -88,7 +88,7 @@ export const TESTIMONIALS = [
     discountPrice: 500,
     discountPercentage: 12,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 70,
+    quantity: 70
   },
   {
     id: "d7e92a51b3c0",
@@ -101,7 +101,7 @@ export const TESTIMONIALS = [
     discountPrice: 300,
     discountPercentage: 10,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 50,
+    quantity: 50
   },
   {
     id: "ef83a69d2f4b",
@@ -114,7 +114,7 @@ export const TESTIMONIALS = [
     discountPrice: 450,
     discountPercentage: 15,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 80,
+    quantity: 80
   },
   {
     id: "8b2f95e8a7c4",
@@ -127,7 +127,7 @@ export const TESTIMONIALS = [
     discountPrice: 550,
     discountPercentage: 7,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 65,
+    quantity: 65
   },
   {
     id: "dc75a6b92f8e",
@@ -140,7 +140,7 @@ export const TESTIMONIALS = [
     discountPrice: 700,
     discountPercentage: 18,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 100,
+    quantity: 100
   },
   {
     id: "dc75a6b92f8e",
@@ -153,6 +153,6 @@ export const TESTIMONIALS = [
     discountPrice: 700,
     discountPercentage: 18,
     discountEndDate: "2024-04-01T22:41:40.188Z",
-    quantity: 100,
-  },
+    quantity: 100
+  }
 ];

@@ -10,13 +10,13 @@ export type DesktopNavToggle = "hover" | "click";
 export type MobileNavToggle = "accordion" | "collapse";
 
 export type NavGroup = {
-  icon?: IconProps['icon'];
+  icon?: IconProps["icon"];
   title: string;
   children?: (NavGroup | NavLink)[];
 };
 
 export type NavLink = {
-  icon?: IconProps['icon'];
+  icon?: IconProps["icon"];
   path?: string;
   title: string;
   disabled?: boolean;

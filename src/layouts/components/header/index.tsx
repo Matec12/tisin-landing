@@ -70,7 +70,7 @@ const Header = () => {
                     rel="noopener"
                     href="https://app.tisin.com/login"
                     variant={isOffSet ? "outlined" : "text"}
-                    color="grey"
+                    color="gray"
                     sx={{
                       backgroundColor: "common.white",
                       color: "primary.main",

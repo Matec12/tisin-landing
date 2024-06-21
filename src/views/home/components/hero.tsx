@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import SlideUp from "@/components/animation/slide-up";
 import { siteConfig } from "@/configs/site";
 
 const HeroWrapper = styled(Box)(() => ({
@@ -90,40 +91,50 @@ const HomeHero = () => {
         />
       ))}
       <HeroContentWrapper>
-        <Typography variant="display2xl" color="common.white" fontWeight={700}>
-          {siteConfig.tagLine}
-        </Typography>
-        <Typography
-          variant="textLg"
-          color="common.white"
-          fontWeight={500}
-          sx={{ maxWidth: 600 }}
-        >
-          {siteConfig.description}
-        </Typography>
-        <Stack direction="row" justifyContent="center" gap={2.5} mt={6}>
-          <Button
-            component={Link}
-            href="/contact"
-            variant="contained"
-            size="large"
-            sx={{
-              backgroundColor: "common.white",
-              color: "primary.main",
-              "&:hover": { bgcolor: "primary.25" }
-            }}
+        <SlideUp>
+          <Typography
+            variant="display2xl"
+            color="common.white"
+            fontWeight={700}
           >
-            Apply Here
-          </Button>
-          <Button
-            component={Link}
-            href="/contact"
-            variant="contained"
-            size="large"
+            {siteConfig.tagLine}
+          </Typography>
+        </SlideUp>
+        <SlideUp>
+          <Typography
+            variant="textLg"
+            color="common.white"
+            fontWeight={500}
+            sx={{ maxWidth: 600 }}
           >
-            Get Started
-          </Button>
-        </Stack>
+            {siteConfig.description}
+          </Typography>
+        </SlideUp>
+        <SlideUp>
+          <Stack direction="row" justifyContent="center" gap={2.5} mt={6}>
+            <Button
+              component={Link}
+              href="/contact"
+              variant="contained"
+              size="large"
+              sx={{
+                backgroundColor: "common.white",
+                color: "primary.main",
+                "&:hover": { bgcolor: "primary.25" }
+              }}
+            >
+              Apply Here
+            </Button>
+            <Button
+              component={Link}
+              href="/contact"
+              variant="contained"
+              size="large"
+            >
+              Get Started
+            </Button>
+          </Stack>
+        </SlideUp>
       </HeroContentWrapper>
     </HeroWrapper>
   );

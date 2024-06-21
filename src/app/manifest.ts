@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "TISIN - Connecting You to Compassionate Support",
     short_name: "TISIN",
     description:
-    "TISIN Therapy App is an innovative platform designed to bridge the gap between individuals seeking mental and emotional support from compassionate, trained, non-certified therapist stand-ins.",
+      "TISIN Therapy App is an innovative platform designed to bridge the gap between individuals seeking mental and emotional support from compassionate, trained, non-certified therapist stand-ins.",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",

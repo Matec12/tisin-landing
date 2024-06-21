@@ -1,6 +1,6 @@
-import { Theme, alpha } from '@mui/material';
+import { Theme, alpha } from "@mui/material";
 
-type Direction = 'bottom' | 'top';
+type Direction = "bottom" | "top";
 
 interface BlurProps {
   color?: string;
@@ -18,12 +18,12 @@ interface ImageProps extends GradientProps {
   url?: string;
 }
 
-const getDirection = (value = 'bottom') => {
+const getDirection = (value = "bottom") => {
   return {
-    top: 'to top',
-    right: 'to right',
-    bottom: 'to bottom',
-    left: 'to left'
+    top: "to top",
+    right: "to right",
+    bottom: "to bottom",
+    left: "to left"
   }[value];
 };
 
@@ -31,7 +31,7 @@ export const cssStyles = (theme: Theme) => {
   return {
     bgBlur: (props?: BlurProps) => {
       const color =
-        props?.color || theme?.palette.background.default || '#000000';
+        props?.color || theme?.palette.background.default || "#000000";
 
       const blur = props?.blur || 6;
       const opacity = props?.opacity || 0.8;
@@ -44,8 +44,8 @@ export const cssStyles = (theme: Theme) => {
     },
     bgGradient: (props?: GradientProps) => {
       const direction = getDirection(props?.direction);
-      const startColor = props?.startColor || `${alpha('#000000', 0)} 0%`;
-      const endColor = props?.endColor || '#000000 75%';
+      const startColor = props?.startColor || `${alpha("#000000", 0)} 0%`;
+      const endColor = props?.endColor || "#000000 75%";
 
       return {
         background: `linear-gradient(${direction}, ${startColor}, ${endColor});`
@@ -55,15 +55,15 @@ export const cssStyles = (theme: Theme) => {
       const url = props?.url;
       const direction = getDirection(props?.direction);
       const startColor =
-        props?.startColor || alpha(theme?.palette.grey[900] || '#000000', 0.88);
+        props?.startColor || alpha(theme?.palette.grey[900] || "#000000", 0.88);
       const endColor =
-        props?.endColor || alpha(theme?.palette.grey[900] || '#000000', 0.88);
+        props?.endColor || alpha(theme?.palette.grey[900] || "#000000", 0.88);
 
       return {
         background: `linear-gradient(${direction}, ${startColor}, ${endColor}), url(${url})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center center'
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center"
       };
     }
   };
