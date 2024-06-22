@@ -170,7 +170,6 @@ const HomeTestimonials = () => {
             </CarouselViewport>
             <Box
               sx={{
-                mt: 6,
                 display: "flex",
                 justifyContent: "end",
                 alignItems: "center"

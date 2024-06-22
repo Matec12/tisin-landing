@@ -84,7 +84,7 @@ const HomeFAQs = () => {
     };
 
   return (
-    <HomeFAQsWrapper>
+    <HomeFAQsWrapper id='faqs'>
       <Container>
         <SlideUp>
           <Box

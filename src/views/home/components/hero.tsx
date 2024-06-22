@@ -26,7 +26,7 @@ const HeroOverlay = styled(Box)(({ theme }) => ({
   opacity: 0.6,
   zIndex: 1,
   backgroundSize: "cover",
-  backgroundColor: theme.palette.common.black,
+  backgroundColor: theme.palette.primary[900],
   backgroundPosition: "center"
 }));
 
