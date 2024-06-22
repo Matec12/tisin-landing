@@ -15,7 +15,12 @@ import GrowIn from "@/components/animation/grow-in";
 const HomeFAQsWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",
   paddingTop: theme.spacing(32),
-  paddingBottom: theme.spacing(32)
+  paddingBottom: theme.spacing(32),
+  backgroundImage: `url("/backgrounds/faqs.png")`,
+  backgroundColor: theme.palette.primary[700],
+  backgroundSize: "auto",
+  backgroundAttachment: "fixed",
+  backgroundPosition: "center"
 }));
 
 const FAQs = [
@@ -25,14 +30,13 @@ const FAQs = [
       "TISIN Therapy App is a platform that connects individuals seeking mental and emotional support with compassionate, non-certified therapist stand-ins."
   },
   {
-    question: "How do I sign up for TISIN Therapy App?",
+    question: "How do I access TISIN Therapy App?",
     answer:
-      "You can sign up by clicking the Get Started button, and following the registration process."
+      "You can access TISIN Therapy App through any web browser on your device. For a more app-like experience, add it to your home screen from your browser’s settings."
   },
   {
     question: "Is there a cost to use TISIN Therapy App?",
-    answer:
-      "TISIN Therapy App offers both free and paid plans. The free plan provides basic features, while the paid plan offers additional services and benefits."
+    answer: "TISIN Therapy App offers only paid plans."
   },
   {
     question: "Who are the therapist stand-ins?",
@@ -93,7 +97,7 @@ const HomeFAQs = () => {
               maxWidth: 600
             }}
           >
-            <Typography variant="displayXl" color="grey.900" fontWeight={600}>
+            <Typography variant="displayXl" color="primary.15" fontWeight={600}>
               Frequently <br /> Asked Questions
             </Typography>
           </Box>
@@ -108,17 +112,27 @@ const HomeFAQs = () => {
                 <Accordion
                   expanded={isExpanded}
                   onChange={handleChange(panelId)}
+                  sx={{
+                    border: (theme) =>
+                      `2px solid ${theme.palette.primary[700]}`,
+                    backgroundColor: (theme) => theme.palette.primary[15]
+                  }}
                 >
                   <AccordionSummary
                     expandIcon={
                       <Icon
                         icon={isExpanded ? "tabler:minus" : "tabler:plus"}
+                        sx={{ color: "primary.700" }}
                       />
                     }
                     aria-controls={`${panelId}-content`}
                     id={`${panelId}-header`}
                   >
-                    <Typography variant="textXl" color="grey.700">
+                    <Typography
+                      variant="textXl"
+                      fontWeight={600}
+                      color="primary.700"
+                    >
                       {faq.question}
                     </Typography>
                   </AccordionSummary>

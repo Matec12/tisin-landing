@@ -18,6 +18,8 @@
     "@iconify/react": "^5.0.1",
     "@mui/material": "^5.15.20",
     "@mui/material-nextjs": "^5.15.11",
+    "embla-carousel": "^8.1.5",
+    "embla-carousel-react": "^8.1.5",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",

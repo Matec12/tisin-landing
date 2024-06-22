@@ -23,10 +23,11 @@ const Header = () => {
   const handleToggleMobileNav = () => setNavOpen((prev) => !prev);
 
   return (
-    <AppBar sx={{ boxShadow: 0, bgcolor: "transparent" }}>
+    <AppBar sx={{ boxShadow: 0, bgcolor: "transparent", zIndex: 99999999 }}>
       <Toolbar
         sx={{
-          p: `0 !important`,
+          px: `0 !important`,
+          py: 2,
           minHeight: `${
             (theme.mixins.toolbar.minHeight as number) - 1
           }px !important`,

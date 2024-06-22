@@ -1,9 +1,16 @@
-import { HomeFAQs, HomeHero } from "@/views/home";
+import {
+  HomeHero,
+  HomeHowItWorks,
+  HomeTestimonials,
+  HomeFAQs
+} from "@/views/home";
 
 const Home = () => {
   return (
     <>
       <HomeHero />
+      <HomeHowItWorks />
+      <HomeTestimonials />
       <HomeFAQs />
     </>
   );

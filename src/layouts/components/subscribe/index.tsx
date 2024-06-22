@@ -12,12 +12,12 @@ import Button from "@mui/material/Button";
 import CustomTextField from "@/components/mui/text-field";
 import SlideUp from "@/components/animation/slide-up";
 
-const upanddownAnimation = keyframes`
+const upanddownAnimation = (translate: number) => keyframes`
   0% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-20px) rotate(180deg);
+    transform: translateY(${translate}px) rotate(180deg);
   }
   100% {
     transform: translateY(0) rotate(360deg);
@@ -27,50 +27,58 @@ const upanddownAnimation = keyframes`
 const SubscribeWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",
   padding: theme.spacing(32),
-  background: theme.palette.secondary[15],
-  overflow: "hidden",
-  borderTopLeftRadius: "50% 20%",
-  borderTopRightRadius: "50% 20%",
-  "::before": {
-    content: '""',
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    height: "40vh",
-    background: theme.palette.secondary[25],
-    borderTopLeftRadius: "50% 20%",
-    borderTopRightRadius: "50% 20%",
-    zIndex: 1
-  }
+  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 90 90'%3E%3Ccircle fill-opacity='0.5' fill='%23FFB727' cx='45' cy='45' r='5'/%3E%3Cg fill='%2394ADA5' fill-opacity='0.5'%3E%3Ccircle cx='0' cy='90' r='5'/%3E%3Ccircle cx='90' cy='90' r='5'/%3E%3Ccircle cx='90' cy='0' r='5'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3C/g%3E%3C/svg%3E")`,
+  backgroundColor: theme.palette.secondary[15],
+  backgroundSize: "auto",
+  backgroundPosition: "center",
+  backgroundRepeat: "repeat"
 }));
 
-const FormCard = styled(Box)<BoxProps>(({ theme }) => ({
-  backgroundColor: theme.palette.common.white,
-  padding: theme.spacing(16),
-  borderRadius: theme.spacing(4),
+const FormCardContainer = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",
-  zIndex: 9999999,
   maxWidth: "800px",
   margin: "0 auto",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   flexDirection: "row",
-  gap: theme.spacing(3),
   "::before": {
     content: '""',
     position: "absolute",
-    top: -10,
-    left: -10,
-    right: 0,
+    top: -20,
+    left: -20,
     height: "40px",
     width: "40px",
     background: theme.palette.primary[300],
     borderRadius: "50% 20%",
-    zIndex: -999,
-    animation: `${upanddownAnimation} 4s ease-in-out infinite`
+    zIndex: 0,
+    animation: `${upanddownAnimation(20)} 4s ease-in-out infinite`
+  },
+  "::after": {
+    content: '""',
+    position: "absolute",
+    bottom: -20,
+    right: -20,
+    height: "40px",
+    width: "40px",
+    background: theme.palette.secondary[300],
+    borderRadius: "50% 20%",
+    zIndex: 0,
+    animation: `${upanddownAnimation(-20)} 4s ease-in-out infinite`
   }
+}));
+
+const FormCard = styled(Box)<BoxProps>(({ theme }) => ({
+  backgroundColor: theme.palette.common.white,
+  padding: theme.spacing(16),
+  borderRadius: theme.spacing(4, 0),
+  width: "100%",
+  zIndex: 1,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  flexDirection: "row",
+  gap: theme.spacing(3)
 }));
 
 const schema = z.object({
@@ -169,21 +177,23 @@ const Subscribe = () => {
           <SlideUp>
             <Typography
               variant="displayLg"
-              color="primary.900"
+              color="primary.500"
               fontWeight={600}
             >
               Subscribe to <br /> our Newsletter
             </Typography>
           </SlideUp>
           <SlideUp>
-            <Typography variant="textSm" color="primary.500" fontWeight={600}>
+            <Typography variant="textMd" color="primary.300" fontWeight={600}>
               Join our family and receive insights to maintain resilience and
               mental strength.
             </Typography>
           </SlideUp>
         </Box>
         <SlideUp>
-          <SubscribeForm />
+          <FormCardContainer>
+            <SubscribeForm />
+          </FormCardContainer>
         </SlideUp>
       </Container>
     </SubscribeWrapper>
