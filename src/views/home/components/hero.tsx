@@ -117,7 +117,6 @@ const HomeHero = () => {
             <Button
               component={Link}
               href="/#"
-              variant="contained"
               size="large"
               sx={{
                 backgroundColor: "common.white",

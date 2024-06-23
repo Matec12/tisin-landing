@@ -25,18 +25,18 @@ const HomeFAQsWrapper = styled(Box)<BoxProps>(({ theme }) => ({
 
 const FAQs = [
   {
-    question: "What is TISIN Therapy App?",
+    question: "What is TISIN Therapy?",
     answer:
-      "TISIN Therapy App is a platform that connects individuals seeking mental and emotional support with compassionate, non-certified therapist stand-ins."
+      "TISIN Therapy is a platform that connects individuals seeking mental and emotional support with compassionate, non-certified therapist stand-ins."
   },
   {
-    question: "How do I access TISIN Therapy App?",
+    question: "How do I access TISIN Therapy?",
     answer:
-      "You can access TISIN Therapy App through any web browser on your device. For a more app-like experience, add it to your home screen from your browser’s settings."
+      "You can access TISIN Therapy through any web browser on your device. For a more app-like experience, add it to your home screen from your browser’s settings."
   },
   {
-    question: "Is there a cost to use TISIN Therapy App?",
-    answer: "TISIN Therapy App offers only paid plans."
+    question: "Is there a cost to use TISIN Therapy?",
+    answer: "TISIN Therapy offers only paid plans."
   },
   {
     question: "Who are the therapist stand-ins?",
@@ -46,7 +46,7 @@ const FAQs = [
   {
     question: "How is my privacy protected?",
     answer:
-      "TISIN Therapy App ensures all user data is encrypted and follows strict privacy policies to protect your information."
+      "TISIN Therapy ensures all user data is encrypted and follows strict privacy policies to protect your information."
   },
   {
     question: "Can I choose my therapist stand-in?",
@@ -66,7 +66,7 @@ const FAQs = [
   {
     question: "What if I need urgent help?",
     answer:
-      "TISIN Therapy App is not for emergencies. If you need urgent help, please contact a certified professional or emergency services."
+      "TISIN Therapy is not for emergencies. If you need urgent help, please contact a certified professional or emergency services."
   },
   {
     question: "Can I provide feedback?",

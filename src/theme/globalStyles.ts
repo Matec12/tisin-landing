@@ -2,9 +2,6 @@ import { Theme } from "@mui/material/styles";
 
 const GlobalStyles = (theme: Theme) => {
   return {
-    a: {
-      fontFamily: "'__DM_Sans_420ee6', '__DM_Sans_Fallback_420ee6'"
-    },
     ".demo-space-x > *": {
       marginTop: "1rem !important",
       marginRight: "1rem !important",

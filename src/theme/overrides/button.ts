@@ -42,10 +42,11 @@ const buttonVariantColorState = (
             ? theme.palette.common.white
             : variant === "outlined"
               ? theme.palette[color][50]
-              : theme.palette[color][600],
-        ...(variant !== "text" && {
-          boxShadow: `0px 0px 0px 4px ${color === "gray" ? "#F2F4F7" : color === "primary" ? theme.palette[color][15] : theme.palette[color][50]}, 0px 1px 2px 0px rgba(16, 24, 40, 0.05)`
-        })
+              : theme.palette[color][600]
+
+        // ...(variant !== "text" && {
+        //   boxShadow: `0px 0px 0px 4px ${color === "gray" ? "#F2F4F7" : color === "primary" ? theme.palette[color][15] : theme.palette[color][50]}, 0px 1px 2px 0px rgba(16, 24, 40, 0.05)`
+        // })
       }
     })
   };

@@ -67,7 +67,7 @@ const FooterTop = () => {
           flexDirection: "row"
         }}
       >
-        <Logo isLogoWhite />
+        <Logo isFull isLogoWhite />
         <Box
           sx={{
             display: "flex",

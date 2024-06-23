@@ -45,7 +45,7 @@ const Header = () => {
             justifyContent: "space-between"
           }}
         >
-          <Logo isLogoWhite={!isOffSet} />
+          <Logo isFull isLogoWhite={!isOffSet} />
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             {lgBelow ? (
