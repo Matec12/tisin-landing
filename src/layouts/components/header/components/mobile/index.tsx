@@ -21,10 +21,16 @@ const MobileNavigation = (props: MobileNavigationProps) => {
       ModalProps={{
         keepMounted: true,
         disablePortal: true,
-        sx: { top: 81, zIndex: 1000 }
+        sx: { top: 63, zIndex: 1000 }
       }}
       PaperProps={{
-        sx: { top: 81, width: "100%", height: "100vh", py: 6 }
+        sx: {
+          top: 63,
+          bgcolor: "common.white",
+          width: "100%",
+          height: "100vh",
+          py: 6
+        }
       }}
     >
       <List className="nav-items" sx={{ pt: 0, "& > :first-child": { mt: 0 } }}>

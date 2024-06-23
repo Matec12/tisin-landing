@@ -7,15 +7,15 @@ import Box, { BoxProps } from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import SlideUp from "@/components/animation/slide-up";
 
-const HomeHowItWorksWrapper = styled(Box)<BoxProps>(({ theme }) => ({
+const HomePricingWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",
   paddingTop: theme.spacing(32),
   paddingBottom: theme.spacing(32)
 }));
 
-const HomeHowItWorks = () => {
+const HomePricing = () => {
   return (
-    <HomeHowItWorksWrapper>
+    <HomePricingWrapper>
       <Container>
         <SlideUp>
           <Box
@@ -29,13 +29,13 @@ const HomeHowItWorks = () => {
             }}
           >
             <Typography variant="displayLg" color="grey.900" fontWeight={600}>
-              How it Works{" "}
+              Pricing
             </Typography>
           </Box>
         </SlideUp>
       </Container>
-    </HomeHowItWorksWrapper>
+    </HomePricingWrapper>
   );
 };
 
-export { HomeHowItWorks };
+export { HomePricing };

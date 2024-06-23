@@ -33,7 +33,8 @@ const Header = () => {
           }px !important`,
           ...(isOffSet && {
             bgcolor: "common.white",
-            transition: "opacity 0.5s ease"
+            transition: "opacity 0.5s ease",
+            boxShadow: theme.shadows[1]
           })
         }}
       >
@@ -69,7 +70,7 @@ const Header = () => {
                     LinkComponent={RouterLink}
                     target="_blank"
                     rel="noopener"
-                    href="https://app.tisin.com/login"
+                    href="/#"
                     variant={isOffSet ? "outlined" : "text"}
                     color="gray"
                     sx={{
@@ -84,7 +85,7 @@ const Header = () => {
                     LinkComponent={RouterLink}
                     target="_blank"
                     rel="noopener"
-                    href="https://app.tisin.com/get-started"
+                    href="/#"
                     variant="contained"
                   >
                     Get Started

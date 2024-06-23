@@ -135,7 +135,7 @@ const HomeTestimonials = () => {
               maxWidth: 600
             }}
           >
-            <Typography variant="displayXl" color="grey.900" fontWeight={600}>
+            <Typography variant="displayLg" color="grey.900" fontWeight={600}>
               What People Say
             </Typography>
           </Box>

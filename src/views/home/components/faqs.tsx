@@ -97,7 +97,7 @@ const HomeFAQs = () => {
               maxWidth: 600
             }}
           >
-            <Typography variant="displayXl" color="primary.15" fontWeight={600}>
+            <Typography variant="displayLg" color="primary.15" fontWeight={600}>
               Frequently <br /> Asked Questions
             </Typography>
           </Box>

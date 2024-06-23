@@ -1,6 +1,7 @@
 import {
   HomeHero,
   HomeHowItWorks,
+  HomePricing,
   HomeTestimonials,
   HomeFAQs
 } from "@/views/home";
@@ -10,6 +11,7 @@ const Home = () => {
     <>
       <HomeHero />
       <HomeHowItWorks />
+      <HomePricing />
       <HomeTestimonials />
       <HomeFAQs />
     </>

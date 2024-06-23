@@ -3,11 +3,6 @@ const menuConfig = [
     title: "About us",
     path: "/#about"
   },
-
-  {
-    title: "Testimonials",
-    path: "/#about"
-  },
   {
     title: "Pricing",
     path: "/#pricing"
@@ -17,7 +12,7 @@ const menuConfig = [
     path: "/#faqs"
   },
   {
-    title: "Apply",
+    title: "Become a Support Counselor",
     path: "/apply"
   }
 ];

@@ -77,7 +77,7 @@ const DesktopNavLink = (props: DesktopNavLinkProps) => {
                 cursor: "pointer",
                 "&:hover": {
                   "& .MuiTypography-root": {
-                    color: "primary.main"
+                    color: isOffSet ? "primary.main" : "primary.100"
                   }
                 }
               }),

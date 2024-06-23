@@ -26,7 +26,7 @@ const upanddownAnimation = (translate: number) => keyframes`
 
 const SubscribeWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",
-  padding: theme.spacing(32),
+  padding: theme.spacing(32, 0),
   backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 90 90'%3E%3Ccircle fill-opacity='0.5' fill='%23FFB727' cx='45' cy='45' r='5'/%3E%3Cg fill='%2394ADA5' fill-opacity='0.5'%3E%3Ccircle cx='0' cy='90' r='5'/%3E%3Ccircle cx='90' cy='90' r='5'/%3E%3Ccircle cx='90' cy='0' r='5'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3C/g%3E%3C/svg%3E")`,
   backgroundColor: theme.palette.secondary[15],
   backgroundSize: "auto",
@@ -101,11 +101,18 @@ const SubscribeForm = () => {
 
   return (
     <FormCard>
-      <form
+      <Box
+        component="form"
         onSubmit={handleSubmit(onSubmit)}
-        style={{ width: "100%", display: "flex", alignItems: "end", gap: 16 }}
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "end",
+          gap: 4
+        }}
       >
-        <Box sx={{ width: "40%" }}>
+        <Box sx={{ width: { xs: "100%", md: "40%" } }}>
           <Controller
             name="fullname"
             control={control}
@@ -125,7 +132,7 @@ const SubscribeForm = () => {
             )}
           />
         </Box>
-        <Box sx={{ width: "40%" }}>
+        <Box sx={{ width: { xs: "100%", md: "40%" } }}>
           <Controller
             name="fullname"
             control={control}
@@ -145,12 +152,12 @@ const SubscribeForm = () => {
             )}
           />
         </Box>
-        <Box sx={{ width: "20%" }}>
+        <Box sx={{ width: { xs: "100%", md: "20%" } }}>
           <Button fullWidth type="submit" variant="contained" color="primary">
             Subscribe
           </Button>
         </Box>
-      </form>
+      </Box>
     </FormCard>
   );
 };

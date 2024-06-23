@@ -9,6 +9,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import SlideUp from "@/components/animation/slide-up";
 import { siteConfig } from "@/configs/site";
+import { useResponsive } from "@/hooks";
 
 const HeroWrapper = styled(Box)(() => ({
   position: "relative",
@@ -71,6 +72,7 @@ const slides = [
 
 const HomeHero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const lgBelow = useResponsive("down", "md");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -93,7 +95,7 @@ const HomeHero = () => {
       <HeroContentWrapper>
         <SlideUp>
           <Typography
-            variant="display2xl"
+            variant={lgBelow ? "displayLg" : "display2xl"}
             color="common.white"
             fontWeight={700}
           >
@@ -114,7 +116,7 @@ const HomeHero = () => {
           <Stack direction="row" justifyContent="center" gap={2.5} mt={6}>
             <Button
               component={Link}
-              href="/contact"
+              href="/#"
               variant="contained"
               size="large"
               sx={{
@@ -123,11 +125,11 @@ const HomeHero = () => {
                 "&:hover": { bgcolor: "primary.25" }
               }}
             >
-              Apply Here
+              Become a Support Counselor
             </Button>
             <Button
               component={Link}
-              href="/contact"
+              href="/#"
               variant="contained"
               size="large"
             >

@@ -1,5 +1,5 @@
 const typography = {
-  fontFamily: "DM Sans, sans-serif",
+  fontFamily: "'__DM_Sans_420ee6', '__DM_Sans_Fallback_420ee6'",
   fontSize: 13.125,
 
   display2xl: {
