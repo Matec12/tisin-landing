@@ -9,8 +9,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Icon from "@/components/icon";
-import SlideUp from "@/components/animation/slide-up";
-import GrowIn from "@/components/animation/grow-in";
+import { GrowIn, SlideUp } from "@/components/animations";
 
 const HomeFAQsWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",
@@ -84,7 +83,7 @@ const HomeFAQs = () => {
     };
 
   return (
-    <HomeFAQsWrapper id='faqs'>
+    <HomeFAQsWrapper id="faqs">
       <Container>
         <SlideUp>
           <Box

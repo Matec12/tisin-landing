@@ -106,20 +106,6 @@ declare module "@mui/material/Chip" {
 }
 
 declare module "@mui/material/Typography" {
-  interface Typography {
-    display2xl: true;
-    displayXl: true;
-    displayLg: true;
-    displayMd: true;
-    displaySm: true;
-    displayXs: true;
-    text2xl: true;
-    textXl: true;
-    textLg: true;
-    textMd: true;
-    textSm: true;
-    textXs: true;
-  }
   interface TypographyPropsVariantOverrides {
     display2xl: true;
     displayXl: true;

@@ -13,15 +13,15 @@ const StyledCompanyName = styled(RouterLink)<LinkProps>(({ theme }) => ({
 const menuConfig = [
   {
     title: "Contact us",
-    path: "/#about"
+    path: "/contact"
   },
   {
     title: "Privacy Policy",
-    path: "/#volunteer"
+    path: "/privacy-policy"
   },
   {
     title: "Terms & Conditions",
-    path: "/#about"
+    path: "/terms"
   }
 ];
 

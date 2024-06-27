@@ -10,7 +10,7 @@ import Box, { BoxProps } from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CustomTextField from "@/components/mui/text-field";
-import SlideUp from "@/components/animation/slide-up";
+import { SlideUp } from "@/components/animations";
 
 const upanddownAnimation = (translate: number) => keyframes`
   0% {

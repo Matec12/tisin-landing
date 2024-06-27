@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import SlideUp from "@/components/animation/slide-up";
+import { SlideUp } from "@/components/animations";
 import { siteConfig } from "@/configs/site";
 import { useResponsive } from "@/hooks";
 
@@ -126,12 +126,7 @@ const HomeHero = () => {
             >
               Become a Support Counselor
             </Button>
-            <Button
-              component={Link}
-              href="/#"
-              variant="contained"
-              size="large"
-            >
+            <Button component={Link} href="/#" variant="contained" size="large">
               Get Started
             </Button>
           </Stack>

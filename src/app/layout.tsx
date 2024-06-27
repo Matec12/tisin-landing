@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     shortcut: "/favicon/favicon-16x16.png",
     apple: "/favicon/apple-touch-icon.png"
   },
-  keywords: "Online, Therapy, Friend, Listen"
+  keywords:
+    "TISIN, Online, Therapy, Friend, Listen, Listener, Counsel, Counselor, Support"
 };
 
 const dmSans = DM_Sans({

@@ -25,4 +25,4 @@ const SlideUp = ({ children }: SlideUpProps) => {
   );
 };
 
-export default SlideUp;
+export { SlideUp };

@@ -45,6 +45,8 @@ const DesktopNavLink = (props: DesktopNavLinkProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  const isHome = pathname === "/";
+
   const isNavLinkActive = () => {
     if (
       pathname === item.path ||
@@ -116,7 +118,7 @@ const DesktopNavLink = (props: DesktopNavLinkProps) => {
               sx={{
                 color: isNavLinkActive()
                   ? "primary.main"
-                  : isOffSet
+                  : !isHome || isOffSet
                     ? "grey.600"
                     : "common.white",
                 fontWeight: isNavLinkActive() ? 600 : 500

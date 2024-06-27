@@ -7,7 +7,7 @@ import Container from "@/components/mui/container";
 import Box, { BoxProps } from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Icon from "@/components/icon";
-import SlideUp from "@/components/animation/slide-up";
+import { SlideUp } from "@/components/animations";
 import {
   NextButton,
   PrevButton,

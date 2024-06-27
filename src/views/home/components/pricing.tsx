@@ -5,7 +5,7 @@ import { styled } from "@mui/material/styles";
 import Container from "@/components/mui/container";
 import Box, { BoxProps } from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import SlideUp from "@/components/animation/slide-up";
+import { SlideUp } from "@/components/animations";
 
 const HomePricingWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   position: "relative",

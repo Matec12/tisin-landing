@@ -25,4 +25,4 @@ const GrowIn = ({ children }: GrowInProps) => {
   );
 };
 
-export default GrowIn;
+export { GrowIn };

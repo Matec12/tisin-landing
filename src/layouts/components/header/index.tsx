@@ -1,5 +1,6 @@
 import { useState } from "react";
 import RouterLink from "next/link";
+import { usePathname } from "next/navigation";
 import { useTheme } from "@mui/material/styles";
 import { useOffSetTop, useResponsive } from "@/hooks";
 import Box from "@mui/material/Box";
@@ -16,9 +17,12 @@ import MobileNavigation from "./components/mobile";
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
+  const pathname = usePathname();
   const theme = useTheme();
   const lgBelow = useResponsive("down", "md");
   const isOffSet = useOffSetTop(90);
+
+  const isHome = pathname === "/";
 
   const handleToggleMobileNav = () => setNavOpen((prev) => !prev);
 
@@ -31,7 +35,7 @@ const Header = () => {
           minHeight: `${
             (theme.mixins.toolbar.minHeight as number) - 1
           }px !important`,
-          ...(isOffSet && {
+          ...((isOffSet || !isHome) && {
             bgcolor: "common.white",
             transition: "opacity 0.5s ease",
             boxShadow: theme.shadows[1]
@@ -45,7 +49,7 @@ const Header = () => {
             justifyContent: "space-between"
           }}
         >
-          <Logo isFull isLogoWhite={!isOffSet} />
+          <Logo isFull isLogoWhite={isHome && !isOffSet} />
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
             {lgBelow ? (
@@ -60,7 +64,9 @@ const Header = () => {
               {lgBelow ? (
                 <IconButton
                   onClick={handleToggleMobileNav}
-                  sx={{ color: isOffSet ? "grey.500" : "common.white" }}
+                  sx={{
+                    color: !isHome || isOffSet ? "grey.500" : "common.white"
+                  }}
                 >
                   <Icon icon="hugeicons:menu-02" rotate={90} />
                 </IconButton>
@@ -71,7 +77,7 @@ const Header = () => {
                     target="_blank"
                     rel="noopener"
                     href="/#"
-                    variant={isOffSet ? "outlined" : "text"}
+                    variant={!isHome || isOffSet ? "outlined" : "text"}
                     color="gray"
                     sx={{
                       backgroundColor: "common.white",
